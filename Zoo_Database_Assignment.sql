@@ -7,17 +7,20 @@
 
 SELECT * FROM tbl_habitat;
 
+
 /* ZOO DATABASE ASSIGNMENT 2: */
 
 SELECT species_name
 FROM tbl_species
 WHERE species_order = 3
 
+
 /* ZOO DATABASE ASSIGNMENT 3: */
 
 SELECT nutrition_type
 FROM tbl_nutrition
 WHERE nutrition_cost <= 600;
+
 
 /* ZOO DATABASE ASSIGNMENT 4: */
 
@@ -26,11 +29,13 @@ FROM tbl_species
 	INNER JOIN tbl_nutrition ON nutrition_id BETWEEN 2202 AND 2206
 WHERE tbl_species.species_nutrition = tbl_nutrition.nutrition_id;
 
+
 /* ZOO DATABASE ASSIGNMENT 5: */
 
 SELECT species_name 'Species Name:', nutrition_type 'Nutrition Type:'
 FROM tbl_species, tbl_nutrition
 WHERE tbl_species.species_nutrition = tbl_nutrition.nutrition_id;
+
 
 /* ZOO DATABASE ASSIGNMENT 6: */
 
@@ -39,12 +44,10 @@ FROM tbl_species, tbl_specialist
 	INNER JOIN tbl_care ON care_specialist = specialist_id
 WHERE care_id = 'care_6' AND care_id = species_care AND species_name = 'penguin';
 
+
 /* ASSIGNMENT 7: STEP 254  */
 
 CREATE DATABASE db_hospital;
-
-USE db_hospital;
-
 
 CREATE TABLE tbl_doctor (
 	doctor_id INT PRIMARY KEY NOT NULL IDENTITY(500,1),
